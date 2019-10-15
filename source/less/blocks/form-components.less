@@ -15,6 +15,16 @@
 .form-components__title {
   .list();
   display: none;
+
+  @media @tablet-widths {
+    display: block;
+    width: 100%;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: #999999
+  }
 }
 
 .form-components__descr {
@@ -24,18 +34,44 @@
 
 .form-components__descr--custom {
   width: 95px;
+
+  @media @tablet-widths {
+    width: auto;
+  }
 }
 
 .form-components__item {
   display: flex;
+  flex-wrap: wrap;
 
-  min-height: 60px;
+  min-height: 61px;
 
   padding: 0 24px;
   font-size: 14px;
 
   background-color: #ffffff;
+
+  @media @tablet-widths {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 280px;
+
+    font-size: 16px;
+  }
+
+  @media @desktop-widths {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 280px;
+
+    font-size: 16px;
+  }
 }
+
 
 .form-components__item--destination {
   width: 240px;
@@ -45,6 +81,17 @@
 
   border-radius: 5px 0  0 5px;
   border-right: 1px solid #dceaef;
+
+  @media @tablet-widths {
+    width: 280px;
+
+    padding: 10px 18px 10px 24px;
+  }
+
+  @media @desktop-widths {
+    width: 360px;
+    padding: 10px 38px 10px 48px;
+  }
 }
 
 .form-components__item--data {
@@ -53,12 +100,38 @@
   padding: 10px 18px 10px 24px;
 
   border-right: 1px solid #dceaef;
+
+  @media @tablet-widths {
+    width: 280px;
+
+    flex-direction: row;
+  }
+
+  @media @desktop-widths {
+    width: 320px;
+    padding: 10px 38px 10px 48px;
+  }
 }
 
 .form-components__item--group,
 .form-components__item--tourists {
   width: 160px;
   padding: 10px 18px 10px 24px;
+
+  @media @tablet-widths {
+    width: 280px;
+  }
+
+  @media @desktop-widths {
+    width: 320px;
+    padding: 10px 38px 10px 48px;
+  }
+}
+
+.form-components__item--tourists {
+  @media @tablet-widths {
+    align-items: flex-start;
+  }
 }
 
 .form-components__input {
@@ -68,6 +141,11 @@
 .form-components__input >input {
   width: 35px;
   border: none;
+  font: inherit;
+
+  @media @tablet-widths {
+    width: 44px;
+  }
 }
 
 .form-components__input--checkpoint {

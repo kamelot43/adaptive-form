@@ -9,5 +9,28 @@
   border: none;
   border-radius: 0 5px 5px 0;
   background-color: #ec933d;
+  cursor: pointer;
 
-}
+  @media @tablet-widths {
+    width: 120px;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 1.1px;
+  }
+
+    @media @desktop-widths {
+      width: 160px;
+    }
+  }
+
+  .custom-button span {
+    display: none;
+
+    @media @desktop-widths {
+      display: inline-block;
+    }
+
+  }

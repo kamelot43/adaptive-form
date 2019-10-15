@@ -28,14 +28,20 @@ a {
 }
 
 body {
-  margin: 0 auto;
-  margin-top: 15%;
+  margin: 0;
   padding: 0;
+
+  margin-left: -10%;
+  margin-top: 15%;
 
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   color: #333333;
-  width: 800px;
+  min-width: 640px;
   background-color: #cdebf5;
+  transform: translateX(15%);
 }
+
+@tablet-widths: ~"(min-width: 960px)";
+@desktop-widths: ~"(min-width: 1160px)";
