@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Форма поиска</title>  
+  <title>Форма поиска</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +14,7 @@
     <div class="search-form__top-level base-components">
       <div class="base-components__item base-components__item--city from-city">
         <!--Город вылета-->
-        <h3 class="base-components__title">Город вылета</h3>
+        <h3 class="base-components__title">Город вылета: </h3>
         <a href="#" class="base-components__link from-city__link">Москва</a>
         <!--Выпадающий список-->
         <select class="search-form__select base-select" name="year">
@@ -31,10 +31,10 @@
       </select>
       </div>
 
-      <div class="base-components__item base-components__tours base-components__item--active hot-tours">
+      <div class="base-components__item base-components__item--tours hot-tours">
         <!--Горячие туры-->
         <h3 class="base-components__title">Горячие туры</h3>
-        <span class="hot-tours__discount">-50%</span>
+        <p class="hot-tours__discount">-50%</p>
       </div>
 
       <div class="base-components__item base-components__item--offers hot-offers">
@@ -44,18 +44,21 @@
 
     </div>
     <!--Базовый уровень формы-->
-    <div class="search-form__middle-level">
+    <div class="search-form__bottom-level">
       <ul class="search-form__list form-components">
         <li class="form-components__item form-components__item--destination">
           <h3 class="form-components__title">Страна, курорт или отель</h3>
-          <label for="checkpoint">Пункт отправления</label>
-          <input type="text" class="form-components__input form-components__input--checkpoint" id="checkpoint">
+          <label  class="visually-hidden" for="checkpoint">Пункт отправления</label>
+          <input type="text" class="form-components__input form-components__input--checkpoint" id="checkpoint" value="Турция">
           <button type="button" class="form-components__btn form-components__btn--checkpoint">Локация</button>
         </li>
         <li class="form-components__item form-components__item--data">
           <h3 class="form-components__title">Дата вылета</h3>
-          <label class="form-components__input" for="from">c <input type="text" id="from" value="20.01."></label>
-          <label class="form-components__input" for="to">по <input type="text" id="to" value="26.01."></label>
+          <p class="form-components__descr">
+            <label class="form-components__input" for="from">c <input type="text" id="from" value="20.01."></label>
+            <label class="form-components__input" for="to">по <input type="text" id="to" value="26.01."></label>
+          </p>
+
           <p class="form-components__descr">на
             <span class="form-components__min">7</span> -
             <span class="form-components__max">8</span> ночей
@@ -64,17 +67,16 @@
         </li>
         <li class="form-components__item form-components__item--tourists">
           <h3 class="form-components__title">Туристы</h3>
-          <p class="form-components__descr">на
-            <span class="form-components__adult">2</span>взрослых <span class="form-components__and">и</span>
-            <span class="form-components__child">1</span>ребенок
+          <p class="form-components__descr form-components__descr--custom">
+            <span class="form-components__adult">2 </span>взрослых <span class="form-components__and">и</span>
+            <span class="form-components__child">1 </span>ребенок
           </p>
           <button type="button" class="form-components__btn form-components__btn--group">кол-во гостей</button>
         </li>
       </ul>
+      <!--Отправка формы-->
+      <button type="submit" class="search-form__button custom-button">Отправить форму</button>
     </div>
-    <!--Отправка формы-->
-    <button type="submit" class="search-form__button custom-button">Отправить форму</button>
-
   </form>
 
 </body>
