@@ -9,6 +9,7 @@
   border: none;
   border-radius: 0 5px 5px 0;
   background-color: #ec933d;
+
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('/img/glass.svg');
@@ -24,18 +25,20 @@
     text-transform: uppercase;
     color: #ffffff;
     letter-spacing: 1.1px;
+
+    background-image: none;
   }
 
-    @media @desktop-widths {
-      width: 160px;
-    }
+  @media @desktop-widths {
+    width: 160px;
+  }
+}
+
+.custom-button span {
+  display: none;
+
+  @media @desktop-widths {
+    display: inline-block;
   }
 
-  .custom-button span {
-    display: none;
-
-    @media @desktop-widths {
-      display: inline-block;
-    }
-
-  }
+}
