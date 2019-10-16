@@ -62,6 +62,7 @@
   }
 
   @media @desktop-widths {
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -154,7 +155,33 @@
 }
 
 .form-components__btn {
-  font-size: 0;
-  border: none;
-  background-color: transparent;
+  display: none;
+
+  @media @desktop-widths {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--checkpoint {
+      background-image: url('/img/pin.svg');
+    }
+
+    &--data {
+      background-image: url('/img/calendar.svg');
+    }
+
+    &--group {
+      background-image: url('/img/user.svg');
+    }
+  }
+
 }

@@ -1,3 +1,37 @@
 .base-select {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 160px;
+
+  box-shadow: 0 2px 10px 0 rgba(41,52,73,.3);
+  z-index: 2;
+}
+
+.base-select__list {
+  width: 160px;
+  height: 230px;
+  padding: 8px 8px 0 8px;
+  margin-top: 1px;
+
+  border: 2px solid #ffffff;
+  border-radius: 0 0 5px 5px;
+}
+
+.base-select__list option {
+  margin-bottom: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.base-select__input {
+  width: 160px;
+  height: 31px;
+
+  padding: 8px;
+
+  border: 2px solid #ffffff;
+  border-radius: 5px 5px 0 0;
 }

@@ -17,18 +17,31 @@
         <h3 class="base-components__title">Город вылета: </h3>
         <a href="#" class="base-components__link from-city__link">Москва</a>
         <!--Выпадающий список-->
-        <select class="search-form__select base-select" name="year">
-        <option value="Saint-Petersburg">Санкт-Петербург</option>
-        <option value="Moscow">Москва</option>
-        <option value="Abakan">Абакан</option>
-        <option value="Arkhangelsk">Архангельск</option>
-        <option value="Astrakhan">Астрахань</option>
-        <option value="Barnaul">Барнаул</option>
-        <option value="Belgorod">Белгород</option>
-        <option value="Blagoveshchensk">Благовещенск</option>
-        <option value="Bryansk">Брянск</option>
-        <option value="Vladivostok">Владивосток</option>
-      </select>
+        <section class="search-form__select base-select disable">
+          <input class="base-select__input" type="text" placeholder="Введите название">
+          <select class="base-select__list" name="year" size="15">
+            <option value="Saint-Petersburg">Санкт-Петербург</option>
+            <option value="Moscow">Москва</option>
+            <option value="Abakan">Абакан</option>
+            <option value="Arkhangelsk">Архангельск</option>
+            <option value="Astrakhan">Астрахань</option>
+            <option value="Barnaul">Барнаул</option>
+            <option value="Belgorod">Белгород</option>
+            <option value="Blagoveshchensk">Благовещенск</option>
+            <option value="Bryansk">Брянск</option>
+            <option value="Vladivostok">Владивосток</option>
+            <option value="Saint-Petersburg">Санкт-Петербург</option>
+            <option value="Moscow">Москва</option>
+            <option value="Abakan">Абакан</option>
+            <option value="Arkhangelsk">Архангельск</option>
+            <option value="Astrakhan">Астрахань</option>
+            <option value="Barnaul">Барнаул</option>
+            <option value="Belgorod">Белгород</option>
+            <option value="Blagoveshchensk">Благовещенск</option>
+            <option value="Bryansk">Брянск</option>
+            <option value="Vladivostok">Владивосток</option>
+          </select>
+        </section>
       </div>
 
       <div class="base-components__item base-components__item--tours hot-tours">
@@ -80,6 +93,24 @@
       </button>
     </div>
   </form>
+  <script type="text/javascript">
+  const link = document.querySelector(".from-city__link");
+  const select = document.querySelector(".base-select");
 
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    select.classList.toggle('disable');
+
+  });
+
+  select.addEventListener("click", function (evt) {
+    if (evt.target.tagName === "OPTION") {
+      select.classList.toggle('disable');
+    }
+  });
+
+  </script>
+
+</script>
 </body>
 </html>
